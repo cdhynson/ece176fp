@@ -30,7 +30,7 @@ def test_model(model, test_loader, device):
     test_acc = accuracy_score(true_labels, predictions)
     report = classification_report(true_labels, predictions, target_names=["Normal", "Pneumonia"])
 
-    print(f"✅ Test Accuracy: {test_acc * 100:.2f}%")
-    print("\n📊 Classification Report:\n", report)
+    print(f"Test Accuracy: {test_acc * 100:.2f}%")
+    print("\nClassification Report:\n", report)
 
     return test_acc, report
